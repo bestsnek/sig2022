@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 
 Route::get("/",[SiteController::class, "landing"])->name("landing");
+Route::get("/peta",[SiteController::class, "peta"])->name("peta");

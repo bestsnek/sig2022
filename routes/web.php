@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,5 @@ Route::get('/', function () {
 
 Route::get("/",[SiteController::class, "landing"])->name("landing");
 Route::get("/peta",[SiteController::class, "peta"])->name("peta");
+
+Route::resource('maps', PageController::class);
